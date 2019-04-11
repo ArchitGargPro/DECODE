@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/home_background"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight=".7">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:text="For using the facility of pickup and drop enter your EPIC no. and mobile no"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:src="@color/home_cc_head"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    android:text="EPIC No"/>
+
+                <EditText
+                    android:id="@+id/idEpicNo"
+                    style="@style/Base.Theme.AppCompat.Light"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:maxLength="9"
+                    android:padding="5dp"
+                    android:background="@color/white"
+                    android:textColorHint="@color/description_cc"
+                    android:hint="Enter Epic No"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:textColor="@color/black"
+                    android:padding="5dp"
+                    android:text="Mobile No"/>
+
+                <EditText
+                    android:id="@+id/idMobileNo"
+                    style="@style/Base.Theme.AppCompat.Light"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:maxLength="10"
+                    android:padding="5dp"
+                    android:background="@color/white"
+                    android:hint="Enter Mobile No"
+                    android:inputType="number"
+                    android:textColorHint="@color/description_cc"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_weight="4">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:text="PICK UP TIME"/>
+
+                    <Spinner
+                        android:id="@+id/idPickupTimeSpinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="7"
+                        android:padding="5dp"
+                        android:spinnerMode="dropdown"
+                        android:background="@color/description_cc"
+                        android:text="PICK UP TIME"
+                        android:entries="@array/time_array"
+                        android:prompt="@string/time_prompt"
+                        android:textAlignment="center"
+                        android:textColor="@color/description_cc" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:textColor="@color/black"
+                        android:padding="5dp"
+                        android:text="DROP TIME"/>
+
+                    <Spinner
+                        android:id="@+id/idDropTimeSpinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_weight="7"
+                        android:padding="5dp"
+                        android:spinnerMode="dropdown"
+                        android:text="PICK UP TIME"
+                        android:background="@color/description_cc"
+                        android:entries="@array/time_array"
+                        android:prompt="@string/time_prompt"
+                        android:textAlignment="center"
+                        android:textColor="@color/description_cc" />
+                </LinearLayout>
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:orientation="horizontal">-->
+                    <!--<Button-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:id="@+id/pickUpLocation"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:visibility="invisible"-->
+                        <!--android:text="PICK UP LOCATION"-->
+                        <!--android:drawablePadding="10dp"-->
+                        <!--android:drawableEnd="@android:drawable/ic_dialog_map"-->
+                        <!--android:layout_weight="5" />-->
+                <!--</LinearLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:id="@+id/idlayoutForOTP"
+                    android:visibility="invisible"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/idetOTP"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:padding="5dp"
+                        android:background="@color/white"
+                        android:textColor="@color/black"
+                        android:inputType="number"
+                        android:textColorHint="@color/description_cc"
+                        android:hint="Enter OTP" />
+                    <Button
+                        android:id="@+id/idbtnsumbit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:onClick="onSubmitButtonPressed"
+                        android:text="Submit OTP" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAlignment="center" />
+                    <Button
+                        android:layout_width="0dp"
+                        android:id="@+id/idbtnOTP"
+                        android:onClick="onGetOtpButtonPressed"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:text="Verify Phone Number" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/idbtnPlayStoreApp"
+                style="@android:style/Widget.DeviceDefault.ImageButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:onClick="openPlayStore"
+                android:background="@drawable/circle_yellow"
+                android:text="Check out PwD app on Play Store" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

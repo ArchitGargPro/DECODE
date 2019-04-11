@@ -1,0 +1,112 @@
+<resources>
+    <string name="app_name">DE CODE</string>
+    <string name="chandni_chowk">Chandni Chowk</string>
+    <string name="about_chandni_chowk">In the heart of Old Delhi, Chandni Chowk is a very busy shopping area with markets full of spices, dried fruits, silver jewellery and vivid saris, while the narrow side streets are crowded with tiny shops selling essential oils, stationary and traditional Indian sweets.</string>
+    <string name="assembly_cons">Chandni Chowk has 10 assembly constituencies, which are:</string>
+    <string name="male">Male Voters</string>
+    <string name="female">Female Voters</string>
+    <string name="pwd">PWD (Divyang)</string>
+    <string name="third_gender">Third Gender</string>
+    <string name="ac_name_1">Adarsh Nagar</string>
+    <string name="ac_name_2">Chandni Chowk</string>
+    <string name="ac_name_3">Ballimaran</string>
+    <string name="ac_name_4">Matia Mahal</string>
+    <string name="ac_name_5">Sadar Bazar</string>
+    <string name="ac_name_6">Model Town</string>
+    <string name="ac_name_7">Shalimar Bagh</string>
+    <string name="ac_name_8">Shakur Basti</string>
+    <string name="ac_name_9">Tri Nagar</string>
+    <string name="ac_name_10">Wazirpur</string>
+    <string name="ac1_count1">99,999</string>
+    <string name="ac1_count2">99,999</string>
+    <string name="ac1_count3">99,999</string>
+    <string name="ac1_count4">99,999</string>
+    <string name="ac2_count1">99,999</string>
+    <string name="ac2_count2">99,999</string>
+    <string name="ac2_count3">99,999</string>
+    <string name="ac2_count4">99,999</string>
+    <string name="ac3_count1">99,999</string>
+    <string name="ac3_count2">99,999</string>
+    <string name="ac3_count3">99,999</string>
+    <string name="ac3_count4">99,999</string>
+    <string name="ac4_count1">99,999</string>
+    <string name="ac4_count2">99,999</string>
+    <string name="ac4_count3">99,999</string>
+    <string name="ac4_count4">99,999</string>
+    <string name="ac5_count1">99,999</string>
+    <string name="ac5_count2">99,999</string>
+    <string name="ac5_count3">99,999</string>
+    <string name="ac5_count4">99,999</string>
+    <string name="ac6_count1">99,999</string>
+    <string name="ac6_count2">99,999</string>
+    <string name="ac6_count3">99,999</string>
+    <string name="ac6_count4">99,999</string>
+    <string name="ac7_count3">99,999</string>
+    <string name="ac7_count4">99,999</string>
+    <string name="ac7_count1">99,999</string>
+    <string name="ac7_count2">99,999</string>
+    <string name="ac8_count3">99,999</string>
+    <string name="ac8_count4">99,999</string>
+    <string name="ac8_count1">99,999</string>
+    <string name="ac8_count2">99,999</string>
+    <string name="ac9_count3">99,999</string>
+    <string name="ac9_count4">99,999</string>
+    <string name="ac9_count1">99,999</string>
+    <string name="ac9_count2">99,999</string>
+    <string name="ac10_count3">99,999</string>
+    <string name="ac10_count4">99,999</string>
+    <string name="ac10_count1">99,999</string>
+    <string name="ac10_count2">99,999</string>
+
+    <!-- For home Fragment -->
+    <string name="home_cc_1">Your Parliament Constituency</string>
+    <string name="home_cc_3">Click to Know More</string>
+    <string name="home_ps">Polling Station</string>
+    <string name="home_info">Election Info</string>
+    <string name="home_pwd">Facilities for PWD (Divyang)</string>
+    <string name="home_feed">Your Feedback</string>
+    <string name="home_login">Official\'s Login</string>
+    <string name="home_third_gender">Facilities for Third Gender</string>
+    <string name="home_kyc">Know your Candidates</string>
+    <string name="cand1_party_name">Party : Aam Admi Party</string>
+    <string name="cand1_name">Name : Arvind Kejriwal</string>
+    <string name="cand2_party_name">Party : Bhartiya Janta Party</string>
+    <string name="cand2_name">Name : Narendra Modi</string>
+    <string name="cand3_party_name">Party : Congress</string>
+    <string name="cand3_name">Name : Priyanka Gandhi</string>
+    <string name="cand4_party_name">Party : Birthday Party</string>
+    <string name="cand4_name">Name : Joker singh</string>
+    <string name="cand5_party_name">Party : </string>
+    <string name="cand5_name">Name : </string>
+    <string name="download_aff">Download Affidavit</string>
+    <string name="symbol">Symbol</string>
+
+    <!-- Google Maps API Key -->
+    <string name="google_android_maps_api">AIzaSyBvW7aqZpx0APMdm9QDdfChI9pA09WHjMM</string>
+
+    <!-- Drop Down items -->
+    <string name="time_prompt">Select time slot</string>
+    <string-array name="time_array">
+        <item>Select time slot</item>
+        <item>10:00AM - 11:00AM</item>
+        <item>11:00AM - 12:00PM</item>
+        <item>01:00PM - 02:00PM</item>
+        <item>02:00PM - 03:00PM</item>
+        <item>03:00PM - 04:00PM</item>
+    </string-array>
+
+    <!-- Login Activity -->
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_name">Fullname</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_register">REGISTER</string>
+    <string name="btn_link_to_register">Not a member? Sign up now.</string>
+    <string name="btn_link_to_login">Already registred! Login Me.</string>
+    <string name="welcome">Welcome</string>
+    <string name="btn_logout">LOGOUT</string>
+    <string name="name">Fullname</string>
+
+    <!-- After Fragment -->
+    <string name="result">Result to be announced yet</string>
+</resources>
