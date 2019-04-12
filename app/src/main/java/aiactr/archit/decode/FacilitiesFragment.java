@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 
 public class FacilitiesFragment extends Fragment {
 
-    int otpNo;
+//    int otpNo;
     String mobileNo;
 
     @Nullable

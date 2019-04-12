@@ -19,6 +19,7 @@ import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
@@ -52,13 +53,14 @@ public class MainActivity extends AppCompatActivity {
     EditText textEpic;
     Spinner spinner2;
     Spinner spinner1;
-    private static final int MY_PERMISSIONS_REQUEST_SEND_SMS =0 ;
+//    private static final int MY_PERMISSIONS_REQUEST_SEND_SMS =0 ;
     MapView mapView;
     GoogleMap map;
     LatLng cc = new LatLng(28.6505,77.2303);
     EditText epicNoEditText;
     EditText mobileNoEdiText;
-    EditText otp;
+    Button button ;
+//    EditText otp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,13 +74,16 @@ public class MainActivity extends AppCompatActivity {
         checkDay();
         textEpic = findViewById(R.id.etepicno);
         pollingStationName = findViewById(R.id.name);
-        spinner1 = findViewById(R.id.idDropTimeSpinner);
-        spinner2 = findViewById(R.id.idPickupTimeSpinner);
+//        spinner1 = findViewById(R.id.idDropTimeSpinner);
+//        spinner2 = findViewById(R.id.idPickupTimeSpinner);
         epicNoEditText= findViewById(R.id.idEpicNo);
         mobileNoEdiText = findViewById(R.id.idMobileNo);
-        otp = findViewById(R.id.idetOTP);
+//        otp = findViewById(R.id.idetOTP);
 
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_NOTHING);
+
+
+
 
 //        spinner1.setOnItemSelectedListener(new CustomOnItemSelectedListener());
 
@@ -308,11 +313,12 @@ public class MainActivity extends AppCompatActivity {
     ////////////////////////////////////////////////////////
     // For Fragment Facilities /////////////////////////////
     ////////////////////////////////////////////////////////
-    int otpNo;
+//    int otpNo;
     String mobileNo="";
     EditText mobile;
     String phoneNo;
-    String message;
+//    String message;
+/*
 
     protected void sendSMSMessage() {
         Log.i("here","000000");
@@ -389,12 +395,13 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Invalid otp", Toast.LENGTH_SHORT).show();
         }
     }
+*/
 
     public void saveInDatabase(){
-        String epicNo = getEpicNo();
+//        String epicNo = getEpicNo();
         String mobileNo = getMobileNo();
-        String pickUpTime = getPickTime();
-        String dropTime = getdropTime();
+        /*String pickUpTime = getPickTime();
+        String dropTime = getdropTime();*/
     }
 
     private void minimizeKeypad() {
@@ -418,6 +425,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+/*
     public int generateOtpno(){
 
         Log.i("here","555555555555555555555555555555555");
@@ -441,13 +449,14 @@ public class MainActivity extends AppCompatActivity {
         return randomNumber;
     }
 
+*/
     private boolean checkAllfields(){
 
         String epicNo = getEpicNo();
-        String pickupTime = getPickTime();
-        String dropTime = getdropTime();
+       /* String pickupTime = getPickTime();*/
+       /* String dropTime = getdropTime();*/
 
-        //Todo check the validity of the epic no from the database server , showing error toast if nothing is entered in epci no
+       //Todo check the validity of the epic no from the database server , showing error toast if nothing is entered in epci no
         if (epicNo.matches("")) {
             Toast.makeText(getApplicationContext(), "Error!!! Epic No Not entered", Toast.LENGTH_SHORT).show();
             return false;
@@ -455,14 +464,14 @@ public class MainActivity extends AppCompatActivity {
         else if (!isValidMobile(mobileNo)) {
             Toast.makeText(getApplicationContext(), "Error!!! Invalid Mobile No entered", Toast.LENGTH_SHORT).show();
             return false;
-        }else if(pickupTime.equals("Select Time")){
+        }/*else if(pickupTime.equals("Select Time")){
             Toast.makeText(getApplicationContext(), " Error!!! PickUpTime Not selected ", Toast.LENGTH_SHORT).show();
             return false;
         }
         else if(dropTime.equals("Select Time")){
             Toast.makeText(getApplicationContext(), "DropTime Not selected ", Toast.LENGTH_SHORT).show();
             return false;
-        }else if(MobileNoExitsinDatabase()){
+        }*/else if(MobileNoExitsinDatabase()){
             Toast.makeText(getApplicationContext(), "Already registered Mobile no ", Toast.LENGTH_SHORT).show();
             return false;
         }
@@ -479,7 +488,7 @@ public class MainActivity extends AppCompatActivity {
 //        return (m.find() && m.group().equals(phoneNo));
         return true;
     }
-    private String getdropTime() {
+   /* private String getdropTime() {
         Spinner mySpinnerDropTime = findViewById(R.id.idDropTimeSpinner);
         String dropTime = mySpinnerDropTime.getSelectedItem().toString();
         return dropTime;
@@ -489,7 +498,7 @@ public class MainActivity extends AppCompatActivity {
         Spinner mySpinnerPickTime = findViewById(R.id.idPickupTimeSpinner);
         String pickupTime = mySpinnerPickTime.getSelectedItem().toString();
         return pickupTime;
-    }
+    }*/
 
     private String getMobileNo() {
         mobileNoEdiText = findViewById(R.id.idEpicNo);
