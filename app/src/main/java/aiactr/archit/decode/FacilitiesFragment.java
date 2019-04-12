@@ -10,9 +10,6 @@ import android.view.ViewGroup;
 
 public class FacilitiesFragment extends Fragment {
 
-//    int otpNo;
-    String mobileNo;
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

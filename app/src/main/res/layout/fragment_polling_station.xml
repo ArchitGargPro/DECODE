@@ -1,55 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/home_background">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <LinearLayout
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
                 android:textColor="@color/black"
                 android:textAlignment="center"
-                android:text="Find your Polling Station" />
-        </LinearLayout>
+                android:text="Know your Polling Station" />
+        </android.support.v7.widget.CardView>
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="3dp"
-            android:src="@color/colorPrimaryDark"
-            android:layout_marginBottom="10dp"/>
+            android:src="@color/colorPrimaryDark" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_height="0dp"
-            android:layout_weight="2">
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
             <EditText
                 android:id="@+id/etepicno"
                 android:layout_width="300dp"
-                android:layout_gravity="center"
                 android:layout_height="wrap_content"
+                android:drawableStart="@android:drawable/ic_menu_search"
                 android:gravity="center"
-                android:maxLength="9"
+                android:hint="Search by Name"
                 android:inputType="textShortMessage"
-                android:hint="Enter your EPIC number here"
+                android:maxLength="9"
+                android:background="@color/white"
                 android:padding="10dp"
                 android:textColor="@color/black"
-                android:textColorHint="@color/description_cc"/>
+                android:textColorHint="@color/description_cc" />
             <Button
                 android:id="@+id/btnGo"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:text="GO"
+                android:layout_marginStart="10dp"
                 android:onClick="goButton"
                 android:layout_gravity="center" />
         </LinearLayout>
@@ -59,176 +63,181 @@
             android:layout_height="3dp"
             android:src="@color/colorPrimaryDark"/>
 
-        <LinearLayout
+        <ListView
             android:layout_width="match_parent"
-            android:visibility="invisible"
-            android:layout_margin="10dp"
-            android:id="@+id/linearlayoutsecond"
-            android:orientation="vertical"
-            android:layout_weight="8"
-            android:layout_height="0dp">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_height="wrap_content"
-                android:paddingBottom="20dp">
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:orientation="vertical"
-                    android:layout_height="wrap_content">
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:orientation="horizontal"
-                        android:layout_height="wrap_content">
-                        <TextView
-                            android:layout_width="0dp"
-                            android:text="NAME:"
-                            android:layout_weight="1"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"/>
-                        <TextView
-                            android:id="@+id/name"
-                            android:layout_width="0dp"
-                            android:layout_weight="2.5"
-                            android:layout_height="wrap_content"
-                            android:textColorHint="@color/description_cc"
-                            android:textSize="15sp"
-                            android:hint="Name of Polling station"
-                            android:textColor="@color/black"/>
-                    </LinearLayout>
+            android:layout_height="match_parent">
 
-                    <Button
-                        android:id="@+id/navigate"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:layout_margin="10dp"
-                        android:paddingStart="10dp"
-                        android:paddingEnd="10dp"
-                        android:background="@color/black"
-                        android:textColor="@color/white"
-                        android:drawablePadding="10dp"
-                        android:drawableEnd="@drawable/navigate_icon_small"
-                        android:text="Navigate" />
+        </ListView>
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:visibility="invisible"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:id="@+id/linearlayoutsecond"-->
+            <!--android:orientation="vertical"-->
+            <!--android:layout_weight="8"-->
+            <!--android:layout_height="0dp">-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:paddingBottom="20dp">-->
+                <!--<LinearLayout-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="2"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:layout_height="wrap_content">-->
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:orientation="horizontal"-->
+                        <!--android:layout_height="wrap_content">-->
+                        <!--<TextView-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:text="NAME:"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:textColor="@color/black"/>-->
+                        <!--<TextView-->
+                            <!--android:id="@+id/name"-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_weight="2.5"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:textColorHint="@color/description_cc"-->
+                            <!--android:textSize="15sp"-->
+                            <!--android:hint="Name of Polling station"-->
+                            <!--android:textColor="@color/black"/>-->
+                    <!--</LinearLayout>-->
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:orientation="horizontal"
-                        android:paddingStart="10dp"
-                        android:layout_height="wrap_content">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:text="Current Queue : "
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/black"/>
-                        <TextView
-                            android:id="@+id/queue"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textColorHint="@color/description_cc"
-                            android:paddingStart="5dp"
-                            android:textSize="15sp"
-                            android:hint="10"
-                            android:textColor="@color/black"/>
-                    </LinearLayout>
+                    <!--<Button-->
+                        <!--android:id="@+id/navigate"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="40dp"-->
+                        <!--android:layout_margin="10dp"-->
+                        <!--android:paddingStart="10dp"-->
+                        <!--android:paddingEnd="10dp"-->
+                        <!--android:background="@color/black"-->
+                        <!--android:textColor="@color/white"-->
+                        <!--android:drawablePadding="10dp"-->
+                        <!--android:drawableEnd="@drawable/navigate_icon_small"-->
+                        <!--android:text="Navigate" />-->
 
-                </LinearLayout>
-                <ImageView
-                    android:id="@+id/img"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:contentDescription="@string/home_ps"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/chowk" />
-            </LinearLayout>
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:orientation="horizontal"-->
+                        <!--android:paddingStart="10dp"-->
+                        <!--android:layout_height="wrap_content">-->
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:text="Current Queue : "-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:textColor="@color/black"/>-->
+                        <!--<TextView-->
+                            <!--android:id="@+id/queue"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:textColorHint="@color/description_cc"-->
+                            <!--android:paddingStart="5dp"-->
+                            <!--android:textSize="15sp"-->
+                            <!--android:hint="10"-->
+                            <!--android:textColor="@color/black"/>-->
+                    <!--</LinearLayout>-->
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:src="@color/colorAccent"/>
+                <!--</LinearLayout>-->
+                <!--<ImageView-->
+                    <!--android:id="@+id/img"-->
+                    <!--android:layout_width="100dp"-->
+                    <!--android:layout_height="100dp"-->
+                    <!--android:contentDescription="@string/home_ps"-->
+                    <!--android:scaleType="fitXY"-->
+                    <!--android:src="@drawable/chowk" />-->
+            <!--</LinearLayout>-->
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:layout_height="wrap_content"
-                android:padding="10dp">
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:scaleType="fitXY"
-                    android:layout_gravity="start"
-                    android:src="@drawable/icon_water" />
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:textColor="@color/black"
-                    android:padding="20dp"
-                    android:text="Drinking Water"
-                    android:layout_height="wrap_content" />
-                <CheckBox
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:checked="true"
-                    android:clickable="false"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:padding="10dp"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_gravity="start"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/icon_police" />
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:textColor="@color/black"
-                    android:text="Nearby Police"
-                    android:padding="20dp"
-                    android:layout_height="wrap_content" />
-                <CheckBox
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:checked="true"
-                    android:clickable="false"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:orientation="horizontal"
-                android:padding="10dp"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_gravity="start"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/icon_health"
-                    android:padding="10dp"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="2"
-                    android:textColor="@color/black"
-                    android:padding="20dp"
-                    android:text="Medical Service"
-                    android:layout_height="wrap_content" />
-                <CheckBox
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:checked="true"
-                    android:clickable="false"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
+            <!--<ImageView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="3dp"-->
+                <!--android:src="@color/colorAccent"/>-->
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="3dp"
-                android:src="@color/colorAccent"/>
-        </LinearLayout>
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:padding="10dp">-->
+                <!--<ImageView-->
+                    <!--android:layout_width="70dp"-->
+                    <!--android:layout_height="70dp"-->
+                    <!--android:scaleType="fitXY"-->
+                    <!--android:layout_gravity="start"-->
+                    <!--android:src="@drawable/icon_water" />-->
+                <!--<TextView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="2"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:padding="20dp"-->
+                    <!--android:text="Drinking Water"-->
+                    <!--android:layout_height="wrap_content" />-->
+                <!--<CheckBox-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:checked="true"-->
+                    <!--android:clickable="false"-->
+                    <!--android:layout_height="wrap_content" />-->
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:padding="10dp"-->
+                <!--android:layout_height="wrap_content">-->
+                <!--<ImageView-->
+                    <!--android:layout_width="70dp"-->
+                    <!--android:layout_height="70dp"-->
+                    <!--android:layout_gravity="start"-->
+                    <!--android:scaleType="fitXY"-->
+                    <!--android:src="@drawable/icon_police" />-->
+                <!--<TextView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="2"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:text="Nearby Police"-->
+                    <!--android:padding="20dp"-->
+                    <!--android:layout_height="wrap_content" />-->
+                <!--<CheckBox-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:checked="true"-->
+                    <!--android:clickable="false"-->
+                    <!--android:layout_height="wrap_content" />-->
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:padding="10dp"-->
+                <!--android:layout_height="wrap_content">-->
+                <!--<ImageView-->
+                    <!--android:layout_width="70dp"-->
+                    <!--android:layout_height="70dp"-->
+                    <!--android:layout_gravity="start"-->
+                    <!--android:scaleType="fitXY"-->
+                    <!--android:src="@drawable/icon_health"-->
+                    <!--android:padding="10dp"/>-->
+                <!--<TextView-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="2"-->
+                    <!--android:textColor="@color/black"-->
+                    <!--android:padding="20dp"-->
+                    <!--android:text="Medical Service"-->
+                    <!--android:layout_height="wrap_content" />-->
+                <!--<CheckBox-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:checked="true"-->
+                    <!--android:clickable="false"-->
+                    <!--android:layout_height="wrap_content" />-->
+            <!--</LinearLayout>-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="3dp"-->
+                <!--android:src="@color/colorAccent"/>-->
+        <!--</LinearLayout>-->
     </LinearLayout>
     
 </android.support.constraint.ConstraintLayout>
