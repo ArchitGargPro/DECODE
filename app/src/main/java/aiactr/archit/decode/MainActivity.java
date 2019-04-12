@@ -271,16 +271,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void goButton(View view)
     {
-        epicEntered = textEpic.getText().toString();
-        switch(epicEntered)
-        {
-            case "ABCD12345" :
-                pollingStationName.setText("Jai Bharat School, Barsha Bula");
-                break;
-            case "xxxx12345" :
-                pollingStationName.setText("Katra Neel, Chandni Chowk");
-                break;
-        }
+//        epicEntered = textEpic.getText().toString();
+//        switch(epicEntered)
+//        {
+//            case "ABCD12345" :
+//                pollingStationName.setText("Jai Bharat School, Barsha Bula");
+//                break;
+//            case "xxxx12345" :
+//                pollingStationName.setText("Katra Neel, Chandni Chowk");
+//                break;
+//        }
     }
 
     ////////////////////////////////////////////////////////
